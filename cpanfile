@@ -1,5 +1,7 @@
 requires "Dancer2" => "1.0.0";
 
+recommends "Text::Markdown"          => "0";
+
 recommends "YAML"                    => "0";
 recommends "URL::Encode::XS"         => "0";
 recommends "CGI::Deurl::XS"          => "0";
