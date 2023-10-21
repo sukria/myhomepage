@@ -1,3 +1,5 @@
+
+<!-- Activity Cards -->
 <section id="activities">
     <% FOREACH activities %>
     <div class="activity-card">
@@ -9,3 +11,53 @@
     </div>
     <% END %>
 </section>
+
+
+
+<!-- Blog Cards -->
+<section id="blog">
+    <div class="blog-header">
+        <h2>Last stories in my blog</h2>
+    </div>
+    <div class="blog-cards">
+
+        <!-- Individual blog post cards go here -->
+
+<div class="blog-card" id="blog-element-1">
+    <a href="/link"><img src="/images/perldancer.jpg" alt="Blog Post 1"></a>
+    <h3>Blog Post Title 1</h3>
+
+	<div class="category-container">
+        <div class="category-ribbon">Perl</div>
+    </div>
+    
+	<p>Short excerpt of the blog post...</p>
+</div>
+<script type="text/javascript">
+// JavaScript code to make the blog-card clickable
+document.getElementById('blog-element-1').addEventListener('click', function() {
+    window.location.href = '/link';
+});
+</script>
+
+<div class="blog-card">
+    <img src="/images/LinkedIn.jpg" alt="Blog Post 1">
+    <h3>Blog Post Title 2</h3>
+
+	<div class="category-container">
+        <div class="category-ribbon">Tech</div>
+    </div>
+    
+	<p>Short excerpt of the blog post...</p>
+</div>
+
+
+
+<!-- Repeat similar card structure for other blog posts (up to 5) -->
+    </div>
+    <div class="blog-button">
+        <a href="#">Read more stories</a>
+    </div>
+</section>
+
+
