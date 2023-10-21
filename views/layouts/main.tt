@@ -7,10 +7,33 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+    <header id="mobile-header">
+        <div id="avatar-icon">
+            <a href="/"><img src="/images/avatar.jpg" alt="Your Avatar"></a>
+        </div>
+        <a href="/"><button id="menu-toggle"><% app_setting.SITE_NAME %></button></a>
+    </header>
+
     <section id="hero">
-        <img src="/images/avatar.jpg" alt="Your Avatar" id="avatar">
-        <h1><% app_setting.SITE_NAME %></h1>
+        <a href="/"><img src="/images/avatar.jpg" alt="Your Avatar" id="avatar"></a>
+        <a href="/"><h1><% app_setting.SITE_NAME %></h1></a>
     </section>
+
 <% content %>
+
+<script type="text/javascript">
+window.addEventListener('scroll', function () {
+    var heroSection = document.getElementById('hero');
+    var mobileHeader = document.getElementById('mobile-header');
+
+    if (window.scrollY > heroSection.clientHeight) {
+        mobileHeader.style.display = 'block';
+    } else {
+        mobileHeader.style.display = 'none';
+    }
+});
+</script>
+
     </body>
 </html>
