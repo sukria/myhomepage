@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - VIRTUAL_HOST=$DANCER_HOST
+      - VIRTUAL_PORT=$DANCER_PORT
+      - LETSENCRYPT_HOST=$DANCER_HOST
+      - LETSENCRYPT_EMAIL=$DANCER_EMAIL
+      - DANCER_ENVIRONMENT=production
+    ports:
+      - "5000:80"
+    volumes:
+      - ${APP_ROOT}/config.yml:/usr/src/app/config.yml
+      - ${APP_ROOT}/public:/usr/src/app/public
+      - ${APP_ROOT}/environments:/usr/src/app/environments
+
+networks:
+  default:
+     external:
+       name: $NETWORK
