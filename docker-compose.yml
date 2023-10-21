@@ -17,6 +17,7 @@ services:
       - ${APP_ROOT}/config.yml:/usr/src/app/config.yml
       - ${APP_ROOT}/public:/usr/src/app/public
       - ${APP_ROOT}/environments:/usr/src/app/environments
+      - ${APP_ROOT}/lib:/usr/src/app/lib
 
 networks:
   default:
