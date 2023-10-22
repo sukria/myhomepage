@@ -29,6 +29,9 @@
         <div class="header-wrapper">
             <a href="/"><img src="/images/avatar.jpg" alt="Your Avatar" id="avatar"></a>
             <a href="/"><h1><% app_setting.SITE_NAME %></h1></a>
+            <% UNLESS is_article_page %>
+                <h3 class="site-baseline"><% app_setting.site_baseline %></h3>
+            <% END %>
         </div>
 
 

@@ -56,6 +56,7 @@ body {
     background-color: #2d2d2d;
     text-align: center;
     padding: 50px 0;
+    padding-bottom: 1.5em;
 }
 
 #avatar {
@@ -68,6 +69,14 @@ body {
 h1 {
     color: #ffffff;
     margin: 0;
+}
+
+h3.site-baseline {
+    margin: 0;
+    margin-top: 1em;
+    padding: 0;
+    color: #777;
+    font-weight: normal;
 }
 
 #activities {
@@ -139,6 +148,10 @@ section#article {
 section#article h1, h2, h3, h4 {
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+#hero a {
+    text-decoration: none;
+} 
 
 section#article h1 {
     color: #444;
