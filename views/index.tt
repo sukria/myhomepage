@@ -1,19 +1,27 @@
 
 <!-- Activity Cards -->
 <section id="activities">
-    <% FOREACH activities %>
-    <div class="activity-card">
-        <a href="<% link %>"><img width="300" height="300" 
-             src="/images/<% name %>.jpg" 
-             alt="<% name %>"></a>
-        <h2><% name %></h2>
-        <p><% desc %> </p>
+    <% FOREACH a IN activities %>
+    <div class="activity-card" id="activity-<% a.name %>">
+        <a href="<% a.link %>"><img width="300" height="300" 
+             src="/images/<% a.name %>.jpg" 
+             alt="<% a.name %>"></a>
+        <h2><% a.name %></h2>
+        <p><% a.desc %> </p>
     </div>
+
+    <script type="text/javascript">
+    // JavaScript code to make the blog-card clickable
+    document.getElementById('activity-<% a.name %>').addEventListener('click', function() {
+        window.location.href = '<% a.link %>';
+    });
+    </script>
+
     <% END %>
 </section>
 
 
-
+<% IF has_posts %>
 <!-- Blog Cards -->
 <section id="blog">
     <div class="blog-header">
@@ -22,42 +30,31 @@
     <div class="blog-cards">
 
         <!-- Individual blog post cards go here -->
+        <% FOREACH p IN posts %>
+    <div class="blog-card" id="blog-<% p.slug %>">
+        <a href="<% p.permalink %>"><img src="/images/perldancer.jpg" alt="<% p.title %>"></a>
+        <h3><% p.title %></h3>
 
-<div class="blog-card" id="blog-element-1">
-    <a href="/link"><img src="/images/perldancer.jpg" alt="Blog Post 1"></a>
-    <h3>Blog Post Title 1</h3>
-
-	<div class="category-container">
-        <div class="category-ribbon">Perl</div>
-    </div>
+	    <div class="category-container">
+            <div class="category-ribbon"><% p.category %></div>
+        </div>
     
-	<p>Short excerpt of the blog post...</p>
-</div>
-<script type="text/javascript">
-// JavaScript code to make the blog-card clickable
-document.getElementById('blog-element-1').addEventListener('click', function() {
-    window.location.href = '/link';
-});
-</script>
-
-<div class="blog-card">
-    <img src="/images/LinkedIn.jpg" alt="Blog Post 1">
-    <h3>Blog Post Title 2</h3>
-
-	<div class="category-container">
-        <div class="category-ribbon">Tech</div>
+	    <p><% p.excerpt %></p>
     </div>
+
+    <script type="text/javascript">
+    // JavaScript code to make the blog-card clickable
+    document.getElementById('blog-<% p.slug %>').addEventListener('click', function() {
+        window.location.href = '<% p.permalink %>';
+    });
+    </script>
+    <% END %>
+
+    </div> <!-- END blog-cards -->
     
-	<p>Short excerpt of the blog post...</p>
-</div>
-
-
-
-<!-- Repeat similar card structure for other blog posts (up to 5) -->
-    </div>
     <div class="blog-button">
-        <a href="#">Read more stories</a>
+        <a href="/blog">Read more stories</a>
     </div>
 </section>
-
+<% END %>
 

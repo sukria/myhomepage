@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><% app_setting.SITE_NAME %></title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
     <link rel="stylesheet" href="/css/style.css">
+    <% IF is_article_page %>
+    <link rel="stylesheet" href="/css/article-style.css">
+    <% END %>
 </head>
 <body>
 
@@ -15,9 +21,22 @@
         <a href="/"><button id="menu-toggle"><% app_setting.SITE_NAME %></button></a>
     </header>
 
+    <% IF is_article_page %>
+    <section id="hero" class="page-header">
+    <% ELSE %>
     <section id="hero">
-        <a href="/"><img src="/images/avatar.jpg" alt="Your Avatar" id="avatar"></a>
-        <a href="/"><h1><% app_setting.SITE_NAME %></h1></a>
+    <% END %>
+        <div class="header-wrapper">
+            <a href="/"><img src="/images/avatar.jpg" alt="Your Avatar" id="avatar"></a>
+            <a href="/"><h1><% app_setting.SITE_NAME %></h1></a>
+        </div>
+
+
+    <% IF is_article_page %>
+        <div class="article-title">
+            <h1 class="article-title-text"><% title %></h1>
+        </div>
+    <% END %>
     </section>
 
 <% content %>

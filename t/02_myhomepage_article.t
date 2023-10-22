@@ -26,6 +26,7 @@ is($page->slug, 'some-test-article', 'slug is correctly initialized');
 # Testing category
 is ($page->category, 'page', "This article is actually a page (top-level)");
 ok($page->is_page, "Flag is_page works");
+like ($page->permalink, qr{/some-test-article}, "permalink looks good");
 
 $localdir = File::Spec->catfile(dirname(__FILE__), 'articles','tech','myhomepage' );
 my $article = myhomepage::article->new( basedir => File::Spec->catfile($localdir));
@@ -43,6 +44,8 @@ eval { $page->content };
 like ($@, qr/content\.md file not found/, "Exception triggered for missing content.md file");
 
 like ($article->content, qr/<h1>This is the first.*<\/h1>/, "content has been rendered as HTML");
+
+like ($article->permalink, qr{/blog/tech/myhomepage}, "permalink looks good");
 
 # End of tests
 done_testing;

@@ -1,0 +1,38 @@
+
+/* Styling for the post entry page */
+
+/* The hero header is smaller in height */
+.page-header {
+    flex-direction: row-reverse; /* Reverse the direction to align hero section to the right */
+    text-align: center;
+	display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 30px 20px !important; /* Adjust padding as needed */
+}
+
+.page-header h1 {
+    font-size: 18px;
+}
+
+.page-header #avatar {
+    width: 80px !important; /* Adjust the size as needed */
+    height: 80px !important;
+    border-radius: 50%;
+    margin: 0 !important; /* Remove margin */
+}
+
+
+/* Title of the article / page */
+
+.article-title {
+    text-align: center;
+    width: 100%;
+}
+
+h1.article-title-text  {
+    font-family: 'Raleway', sans-serif; /* Use Raleway font */
+    font-size: 36px; /* Adjust font size as needed */
+    color: #ddd; /* Light grey color */
+    padding-left: 100px; /* to counter the space taken by the avatar on the right */
+}

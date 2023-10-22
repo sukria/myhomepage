@@ -57,6 +57,45 @@ has meta => (
     },
 );
 
+has title => (
+    is => 'ro',
+    lazy => 1,
+    default => sub {
+        my ($self) = @_;
+        return $self->meta->{'title'};
+    },
+);
+
+has tags => (
+    is => 'ro',
+    lazy => 1,
+    default => sub {
+        my ($self) = @_;
+        return $self->meta->{'tags'};
+    },
+);
+
+has excerpt => (
+    is => 'ro',
+    lazy => 1,
+    default => sub {
+        my ($self) = @_;
+        return $self->meta->{'excerpt'};
+    },
+);
+
+has permalink => (
+    is => 'ro',
+    lazy => 1,
+    default => sub {
+        my ($self) = @_;
+        if ($self->is_page) {
+            return '/' . $self->slug;
+        }
+        return join('/', ('/blog', $self->category, $self->slug ));
+    },
+);
+
 has content => (
     is => 'ro',
     lazy => 1,
@@ -67,9 +106,11 @@ has content => (
             croak "content.md file not found in ".$self->basedir;
         };
     
-        my $markdown = read_file($content_file);
+        my $markdown = read_file($content_file, { binmode => ':encoding(UTF-8)' });
         return markdown($markdown);
     },
 );
+
+
 
 1;
