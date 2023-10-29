@@ -7,9 +7,21 @@
 # Your application's name
 appname: "myhomepage"
 
+liteblog:
+  title: "Alexis Sukrieh"
+  widgets:
+    - name: activities
+      params: 
+        source: "liteblog/activities.yml"
+    - name: blog
+      params:
+        title: "Read my Stories"
+        mount: "/blog"
+        root: "articles"
+
 # The default layout to use for your application (located in
 # views/layouts/main.tt)
-layout: "main"
+layout: "liteblog"
 
 # when the charset is set to UTF-8 Dancer2 will handle for you
 # all the magic of encoding and decoding. You should not care
@@ -26,22 +38,4 @@ charset: "UTF-8"
 # template engine
 # simple: default and very basic template engine
 # template_toolkit: TT
-
 template: template_toolkit
-engines:
-  template:
-    template_toolkit:
-      start_tag: '<%'
-      end_tag:   '%>'
-
-app_setting:
-  SITE_NAME: "My Great Site"
-  activities:
-    - name: "Strava"
-      link: "#"
-      desc: "Some baseline for Strava"
-    - name: "LinkedIn"
-      link: '#'
-      desc: "Some baseline for LinkedIn"
-
-
