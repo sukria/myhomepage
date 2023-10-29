@@ -1,0 +1,28 @@
+---
+  - name: "LinkedIn"
+    image: "/images/LinkedIn.jpg"
+    link: 'https://fr.linkedin.com/in/asukrieh'
+    desc: "As the CTO of <a href=\"https://weborama.com\">Weborama</a>, I delve into Chrome's Privacy Sandbox and Snowflake's Data Cloud as an Online Marketing Expert. If you'd like to connect or chat professionally, LinkedIn is the best way to reach me."
+  - name: "GitHub"
+    image: "/images/GitHub.jpg"
+    link: "https://github.com/sukria"
+    desc: "Creator of <a href=\"https://perldancer.org\">PerlDancer web framework</a>, now overseen by the Dancer Core Developer team. Occasionally releasing open-source contributions here (mostly Perl)."
+  - name: "Strava"
+    image: "/images/Strava.jpg"
+    link: "https://www.strava.com/athletes/6777031"
+    desc: "Steady runs and calisthenics routines are my therapy. Check out my Strava profile and move with me."
+  - name: "Colorfulminis"
+    image: "/images/Colorfulminis.jpg"
+    link: "https://colorfulminis.com"
+    desc: "Colorfulminis c'est le site et <a href=\"https://www.youtube.com/c/colorfulminis\">la chaîne Youtube</a> que j'ai créés en 2015 autour du hobby des jeux de plateau et de la peinture de figurines. Warhammer, c'est ma madeleine de Proust et ça me détend !"
+  - name: "Writing"
+    image: "/images/Writing.jpg"
+    link: "https://www.amazon.fr/stores/author/B09SYHBPL6"
+    desc: "Il m'arrive de plonger dans ce puits qu'est la littérature. Retrouvez mes livres sur ma page Amazon."
+  - name: "Call of Dungeons"
+    image: "/images/Call of Dungeons.jpg"
+    link: "https://callofdungeons.com"
+    desc: "Un prototype de jeu Dungeon Crawler figurine agnostique, qui vise à réunir le meilleur des jeux modernes avec un feeling HeroQuest. Projet en cours, je ne sais pas quand il sera terminé (don't ask me!)"
+
+
+
