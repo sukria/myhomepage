@@ -4,12 +4,12 @@
 # console: log messages to STDOUT (your console where you started the
 #          application server)
 # file:    log message to a file in log/
-logger: "console"
+logger: "Console::Colored"
 
 # the log level for this environment
 # core is the lowest, it shows Dancer2's core log messages as well as yours
 # (debug, info, warning and error)
-log: "core"
+log: "info"
 
 # should Dancer2 show a stacktrace when an 5xx error is caught?
 # if set to yes, public/500.html will be ignored and either
