@@ -139,6 +139,12 @@ h3.site-baseline {
     text-decoration: none;
 } 
 
+/* For the default content when the website is empty */
+section#main-page {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
 
 /* For mobile responsiveness */
 
