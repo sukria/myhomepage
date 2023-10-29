@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* slightly bold but not too heavy */
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.75em;
+}
+
+h1.site-title {
+    font-size: 1.5em;
+}
+
+a {
+    color: #007BFF; /* Example blue color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+a:hover {
+    color: #0056b3; /* Darker shade of blue for hover state */
+}
+
+button, .btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Header Menu */
+/* CSS for the mobile header */
+#mobile-header {
+    display: none;
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust z-index as needed */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex-direction: row; /* Default flex-direction */
+}
+
+#avatar-icon {
+    display: inline-block;
+    width: 30px; /* Adjust the size as needed */
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+#avatar-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CSS for the menu toggle button */
+#menu-toggle {
+    background: none;
+    border: none;
+    color: #eee;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    flex: 1; /* Expand to fill available space */
+    text-align: center; /* Center text horizontally */
+}
+
+
+/* Home Page Layout */
+
+#hero {
+    background-color: #2d2d2d;
+    text-align: center;
+    padding: 50px 0;
+    padding-bottom: 1.5em;
+}
+
+#avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    margin: 0;
+}
+
+h3.site-baseline {
+    margin: 0;
+    margin-top: 1em;
+    padding: 0;
+    color: #777;
+    font-weight: normal;
+}
+
+
+/* make an element clickable with a zoom-in effect */
+.clickable-div {
+    /* Effect on mouse over */
+    cursor: pointer; /* Add pointer cursor for clickability */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add transition for hover effect */
+}
+
+.clickable-div:hover {
+    transform: scale(1.1); /* Apply a 10% zoom effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+}
+
+#hero a {
+    text-decoration: none;
+} 
+
+
+/* For mobile responsiveness */
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        font-size: 15px;
+    }
+    h1, h2, h3 {
+        line-height: 1.4;
+    }
+
+}
+
+
