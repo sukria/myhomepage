@@ -1,11 +1,38 @@
-FROM sherwind/dancer:onbuild
+# Use a more recent Debian release as base
+FROM debian:buster-slim
 
-# Copy your module tarball into the container
-COPY Dancer2-Plugin-LiteBlog-0.01.tar.gz /tmp/
+# Maintainer and metadata (optional but recommended)
+LABEL maintainer="sukria@gmail.com" \
+      description="image for alexissukrieh.com"
 
-# Install your module
-RUN apt-get update && apt-get install -y cpanminus \
-    && cpanm /tmp/Dancer2-Plugin-LiteBlog-0.01.tar.gz
+# Install required packages
+RUN apt-get update && \
+    apt-get install -y perl cpanminus libdbi-perl build-essential libssl-dev && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# comment out to use development environment
+# Install Dancer2, Starman, and other necessary CPAN modules
+RUN cpanm -n Dancer2 Starman
+
+# Copy your locally built Perl module to the container
+COPY ./Dancer2-Plugin-LiteBlog-0.01.tar.gz /tmp/
+
+# Install your locally built module
+RUN cpanm --installdeps -n /tmp/Dancer2-Plugin-LiteBlog-0.01.tar.gz
+RUN cpanm /tmp/Dancer2-Plugin-LiteBlog-0.01.tar.gz
+
+# Set the environment for Dancer2
 ENV DANCER_ENVIRONMENT production
+#ENV DANCER_APPDIR /app
+
+# Copy your Dancer2 application to the container
+COPY . /app
+
+# Set working directory
+WORKDIR /app
+
+# Expose the port Starman will run on
+EXPOSE 5000
+
+# Start the Dancer2 application with Starman
+CMD ["starman", "--workers=2", "bin/app.psgi", "-p", "5000"]
