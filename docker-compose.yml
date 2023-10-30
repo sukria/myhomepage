@@ -14,9 +14,9 @@ services:
     ports:
       - "5000:80"
     volumes:
-      - ${APP_ROOT}/config.yml:/usr/src/app/config.yml
-      - ${APP_ROOT}/public:/usr/src/app/public
-      - ${APP_ROOT}/environments:/usr/src/app/environments
+      - ${APP_ROOT}/config.yml:/app/config.yml
+      - ${APP_ROOT}/public:/app/public
+      - ${APP_ROOT}/environments:/app/environments
 
 networks:
   default:
