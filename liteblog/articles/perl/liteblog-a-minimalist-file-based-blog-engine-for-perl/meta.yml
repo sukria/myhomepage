@@ -4,3 +4,4 @@ tags:
   - "Dancer2"
   - "Blog"
 excerpt: "I wanted to revamp my site, but WordPress felt too heavy. In a twist of nostalgia, I returned to Perl and developed LiteBlog, a Dancer2 plugin. In this article, I will walk you through how this plugin effortlessly converts a Dancer2 app into a lightweight blog platform, and I'll provide a step-by-step guide for setting it up and using it."
+image: "/images/liteblog-article_optmzd.jpg"
