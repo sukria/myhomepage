@@ -10,15 +10,17 @@ appname: "myhomepage"
 liteblog:
   title: "Alexis Sukrieh"
   logo: "/images/avatar.jpg"
+  feature:
+    highlight: 1
   widgets:
     - name: activities
       params: 
         source: "liteblog/activities.yml"
-    #- name: blog
-    #  params:
-    #    title: "Read my Stories"
-    #    mount: "/blog"
-    #    root: "liteblog/articles"
+    - name: blog
+      params:
+        title: "Read my Stories"
+        mount: "/blog"
+        root: "liteblog/articles"
 
 # The default layout to use for your application (located in
 # views/layouts/main.tt)
