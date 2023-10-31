@@ -156,7 +156,16 @@ section#main-page {
     h1, h2, h3 {
         line-height: 1.4;
     }
+    img {
+        max-width: 550px;
+        margin: auto;
+    }
 
 }
 
-
+@media screen and (max-width: 600px) {
+    img {
+        max-width: 450px;
+        margin: auto;
+    }
+}
