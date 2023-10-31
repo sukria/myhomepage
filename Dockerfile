@@ -14,12 +14,9 @@ RUN apt-get update && \
 # Install Dancer2, Starman, and other necessary CPAN modules
 RUN cpanm -n Dancer2 Starman
 
-# Copy your locally built Perl module to the container
-COPY ./Dancer2-Plugin-LiteBlog-0.01.tar.gz /tmp/
-
-# Install your locally built module
-RUN cpanm --installdeps -n /tmp/Dancer2-Plugin-LiteBlog-0.01.tar.gz
-RUN cpanm /tmp/Dancer2-Plugin-LiteBlog-0.01.tar.gz
+# Install LiteBlog and its dependencies
+RUN cpanm --installdeps -n Dancer2::Plugin::LiteBlog
+RUN cpanm Dancer2::Plugin::LiteBlog
 
 # Set the environment for Dancer2
 ENV DANCER_ENVIRONMENT production

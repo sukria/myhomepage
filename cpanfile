@@ -1,4 +1,5 @@
 requires "Dancer2" => "1.0.0";
+requires "Dancer2::Plugin::LiteBlog" => "0.02";
 
 # app deps
 requires "Text::Markdown"          => "0";
