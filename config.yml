@@ -10,6 +10,11 @@ appname: "myhomepage"
 liteblog:
   title: "Alexis Sukrieh"
   logo: "/images/avatar.jpg"
+  navigation:
+    - label: "Home"
+      link: "/"
+    - label: "Perl"
+      link: "/blog/perl"
   feature:
     highlight: 1
   widgets:
