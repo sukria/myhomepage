@@ -1,0 +1,3 @@
+---
+title: "Bash Aliases to Manage Git Flow Feature Branches Seamlessly"
+excerpt: "A straightforward approach to managing Git Flow feature branches with Bash aliases. I crafted simple functions and aliases that allow for starting and finishing features effortlessly, but only when you're on the correct branch. The article provides practical code blocks and explanations for incorporating these helpers into your workflow."
