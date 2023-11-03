@@ -17,6 +17,7 @@ services:
       - ${APP_ROOT}/config.yml:/app/config.yml
       - ${APP_ROOT}/public:/app/public
       - ${APP_ROOT}/liteblog:/app/liteblog
+      - ${APP_ROOT}/views:/app/views
       - ${APP_ROOT}/environments:/app/environments
 
 networks:
