@@ -1,4 +1,5 @@
 ---
 featured_posts:
-  - "perl/liteblog-a-minimalist-file-based-blog-engine-for-perl"
+  - "dev/liteblog-a-minimalist-file-based-blog-engine-for-perl"
+  - "dev/bash-aliases-to-manage-git-flow-feature-branches-seamlessly"
 

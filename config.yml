@@ -13,8 +13,8 @@ liteblog:
   navigation:
     - label: "Home"
       link: "/"
-    - label: "Perl"
-      link: "/blog/perl"
+    - label: "Dev Blog"
+      link: "/dev"
   feature:
     highlight: 1
   widgets:
