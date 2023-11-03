@@ -51,7 +51,9 @@ to open a new feature with as less verbosity as possible.
 }
 </code></pre>
 
-To use this function, simply call it with the feature name:
+To use this function, simply call it with the feature name (note that I've added
+an alias <code>gfs</code> that points to that function, as we'll see in the end
+of this article):
 
 <pre><code class="bash">gfs feature-name</code></pre>
 
