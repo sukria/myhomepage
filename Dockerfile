@@ -22,6 +22,9 @@ RUN cpanm Dancer2::Plugin::LiteBlog
 ENV DANCER_ENVIRONMENT production
 #ENV DANCER_APPDIR /app
 
+# Update local repo
+RUN git pull
+
 # Copy your Dancer2 application to the container
 COPY . /app
 
