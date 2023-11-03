@@ -7,7 +7,7 @@ burdensome over time. The constant typing of commands like <code>git flow
 feature start ...</code> began to wear on me. To address this, I've refined my
 Bash environment to create aliases that eliminate the tedious work.
 
-I got the idea of this little hack when I was hacking on 
+I got the idea of this little hack when I was working on 
 [Dancer2::Plugin::LiteBlog](/dev/liteblog-a-minimalist-file-based-blog-engine-for-perl/).
 I often needed to switch between branches and ensure that I was applying changes in the correct place. To
 streamline my Git workflow, I came up with a set of Bash functions and aliases
@@ -28,7 +28,8 @@ my example below, it will be named _devel_), with the following command line:
 </code></pre>
 
 It's quite verbose, and you should not launch this command unless you are:
-  * in a git repository (well, indeed).
+
+  * in a git repository
   * the current branch is the development branch
 
 ### The <code>git_flow_feature_start</code> Function
