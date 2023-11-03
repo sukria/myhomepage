@@ -18,13 +18,13 @@ liteblog:
   feature:
     highlight: 1
   widgets:
-    - name: activities
+    - name: "activities"
       params: 
         source: "liteblog/activities.yml"
-    - name: blog
+    - name: "blog"
       params:
         title: "Read my Stories"
-        mount: "/blog"
+        mount: "/"
         root: "liteblog/articles"
 
 # The default layout to use for your application (located in
