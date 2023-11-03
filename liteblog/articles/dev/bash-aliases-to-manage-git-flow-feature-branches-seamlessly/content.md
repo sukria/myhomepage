@@ -27,10 +27,10 @@ my example below, it will be named _devel_), with the following command line:
 <pre><code class="bash">git flow feature start FEATURE_NAME
 </code></pre>
 
-It's quite verbose, and you should not launch this command unless you are:
+It's quite verbose, and you should not launch this command unless:
 
-  * in a git repository
-  * the current branch is the development branch
+  * You are in a git repository.
+  * The current branch is the development branch.
 
 ### The <code>git_flow_feature_start</code> Function
 
