@@ -42,10 +42,11 @@
     width: 100%; /* Ensure it takes the full width of the container */
 }
 
-.post-title {
+.header-content .post-title {
     font-size: 3.5em;
     margin-bottom: 20px; /* Can adjust this for spacing, if needed */
 	margin-top: 80px;
+    padding: 1rem;
 
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7); /* Subtle text outline for depth */
     text-align: center;
@@ -118,7 +119,6 @@ ul.post-meta {
 .post-header.no-featured-image .post-title {
     color: #333;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7); /* Subtle text outline for depth */
-    padding: 20px 0; /* Padding for visual space */
 }
 
 /* Adjust the meta background and text color for light theme */
@@ -293,6 +293,15 @@ article blockquote {
 
     #mobile-header {
         display: flex;
+    }
+
+    .header-content .post-title,
+    .post-header.no-featured-image .post-title {
+        font-size: 2.5em;
+    }
+
+    ul.post-meta {
+        margin-top: 10px;
     }
 
     article {

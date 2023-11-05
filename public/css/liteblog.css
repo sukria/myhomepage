@@ -5,6 +5,8 @@
     --text-color: #333;
     --background-color: #f4f4f4;
     --header-bg-color: #2d2d2d;
+    --header-text-color: #777;
+    --header-link-color: #bbb;
     --link-color: #007BFF;
     --link-hover-color: #0056b3;
 }
@@ -202,6 +204,7 @@ a:focus, button:focus, .btn:focus {
     position: sticky;
     top: 0;
     z-index: 1000; 
+    height: 55px;
 }
 
 .hero-banner-wrapper {
@@ -217,6 +220,7 @@ a:focus, button:focus, .btn:focus {
     font-size: 1.5em;
 	color: #999;
     font-weight: normal;
+    font-size: 1.2rem;
 }
 
 /* Navigation elements */
@@ -244,7 +248,7 @@ nav a:hover {
 
 .avatar-logo {
 	margin-top: 5px;
-    width: 50px;
+    width: 40px;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -265,6 +269,19 @@ nav a:hover {
     height: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
+}
+
+/* For smooth transition */
+.hidden-hero {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+}
+
+.visible-hero {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 0.3s linear;
 }
 
 h1 {
@@ -304,6 +321,33 @@ section#main-page {
     margin: auto;
 }
 
+/* Footer */
+/* Footer Styles */
+.site-footer {
+  padding: 20px;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: center;
+  font-family: 'Lato', sans-serif; /* Already imported in your HTML */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.site-footer .footer-content p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.site-footer a {
+    color: var(--header-link-color);
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+
 /* For mobile responsiveness */
 
 @media screen and (max-width: 768px) {
@@ -328,5 +372,9 @@ section#main-page {
         max-width: 100%;
         margin: auto;
     }
+  
+    .site-footer .footer-content p {
+    font-size: 14px;
+  }
 }
 
