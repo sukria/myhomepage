@@ -1,5 +1,5 @@
 ---
-featured_posts:
+_featured_posts:
   - "dev/liteblog-a-minimalist-file-based-blog-engine-for-perl"
   - "dev/bash-aliases-to-manage-git-flow-feature-branches-seamlessly"
 

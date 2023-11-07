@@ -10,6 +10,9 @@ appname: "myhomepage"
 liteblog:
   title: "Alexis Sukrieh"
   logo: "/images/avatar.jpg"
+  base_url: "https://alexissukrieh.com"
+  description: "Personal site of Alexis Sukrieh, CTO of Weborama, Perl Hacker and Calisthenics Enthusiast"
+
   navigation:
     - label: "Home"
       link: "/"
