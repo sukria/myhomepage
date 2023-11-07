@@ -7,7 +7,7 @@ LABEL maintainer="sukria@gmail.com" \
 
 # Install required packages
 RUN apt-get update && \
-    apt-get install -y perl cpanminus libdbi-perl build-essential libssl-dev && \
+    apt-get install -y perl cpanminus libdbi-perl build-essential libssl-dev libexpat1-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -15,8 +15,11 @@ RUN apt-get update && \
 RUN cpanm -n Dancer2 Starman
 
 # Install LiteBlog and its dependencies
-RUN cpanm --installdeps -n Dancer2::Plugin::LiteBlog
-RUN cpanm Dancer2::Plugin::LiteBlog
+RUN set -e; \
+    cpanm --installdeps -n Dancer2::Plugin::LiteBlog || (cat /root/.cpanm/work/*/build.log && false)
+
+RUN set -e; \
+    cpanm Dancer2::Plugin::LiteBlog || (cat /root/.cpanm/work/*/build.log && false)
 
 # Set the environment for Dancer2
 ENV DANCER_ENVIRONMENT production
