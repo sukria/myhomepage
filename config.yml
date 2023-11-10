@@ -17,6 +17,7 @@ liteblog:
     - "Weborama"
     - "CTO"
   logo: "/images/avatar.jpg"
+  favicon: "/images/avatar.jpg"
   base_url: "https://alexissukrieh.com"
 
   navigation:
