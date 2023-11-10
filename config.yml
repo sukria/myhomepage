@@ -9,13 +9,25 @@ appname: "myhomepage"
 
 liteblog:
   title: "Alexis Sukrieh"
+  description: "Personal site of Alexis Sukrieh, CTO of Weborama, Perl Hacker and Calisthenics Enthusiast"
+  tags: 
+    - "Alexis Sukrieh"
+    - "Perl"
+    - "Calisthenics"
+    - "Weborama"
+    - "CTO"
   logo: "/images/avatar.jpg"
   base_url: "https://alexissukrieh.com"
-  description: "Personal site of Alexis Sukrieh, CTO of Weborama, Perl Hacker and Calisthenics Enthusiast"
 
   navigation:
     - label: "Home"
       link: "/"
+    - label: "Linkedin"
+      link: "https://fr.linkedin.com/in/asukrieh"
+    - label: "Strava"
+      link: "https://www.strava.com/athletes/6777031"
+    - label: "GitHub"
+      link: "https://github.com/sukria"
     - label: "Dev Blog"
       link: "/dev"
   feature:
